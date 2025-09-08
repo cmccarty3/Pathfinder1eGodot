@@ -9,3 +9,7 @@ res://Scripts/DataSchemas/SpellData.gd
 res://Scripts/DataSchemas/CharacterData.gd
 res://Data/Classes/Fighter.tres
 res://Data/Classes/Wizard.tres
+res://Data/Races/Human.tres
+res://Data/Races/Elf.tres
+res://Data/Races/Dwarf.tres
+res://Scenes/characterCreation.tscn

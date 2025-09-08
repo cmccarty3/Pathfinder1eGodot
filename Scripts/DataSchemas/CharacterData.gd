@@ -5,6 +5,7 @@ class_name CharacterData
 @export var level: int = 1
 @export var class_ref: ClassData
 @export var race_ref: RaceData
+@export var base_abilities := {"STR": 10, "DEX": 10, "CON": 10, "INT": 10, "WIS": 10, "CHA": 10}
 
 func get_basics() -> Dictionary:
 	if class_ref == null:

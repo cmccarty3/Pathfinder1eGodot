@@ -70,7 +70,6 @@ func _on_log_meta_clicked(meta: Variant) -> void:
 	# 3) Last-resort debug
 	print_line("Clicked: %s" % key)
 
-
 # -------- Hover tooltips for links --------
 func _on_log_meta_hover_started(meta: Variant) -> void:
 	var key := str(meta)

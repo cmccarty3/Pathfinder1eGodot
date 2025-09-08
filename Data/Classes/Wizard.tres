@@ -4,8 +4,8 @@
 
 [resource]
 script = ExtResource("1_xafdl")
-key = &""
-display_name = ""
+key = &"wizardClass"
+display_name = "Wizard"
 hit_die = 6
 skills_per_level = 2
 bab_progression = 2

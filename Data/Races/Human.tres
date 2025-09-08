@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="RaceData" load_steps=2 format=3 uid="uid://bc4bns6loy04t"]
+
+[ext_resource type="Script" uid="uid://dc54rom1exsjc" path="res://Scripts/DataSchemas/RaceData.gd" id="1_r03lq"]
+
+[resource]
+script = ExtResource("1_r03lq")
+key = &"humanRace"
+display_name = "Human"
+size = 4
+base_speed = 30
+ability_mods = {
+"CHA": 0,
+"CON": 0,
+"DEX": 0,
+"INT": 0,
+"STR": 0,
+"WIS": 0
+}
+senses = []
+languages = []
+traits = []
+skill_bonuses = {}
+metadata/_custom_type_script = "uid://dobatn13xqgns"

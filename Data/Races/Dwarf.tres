@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="RaceData" load_steps=2 format=3 uid="uid://cf4qpn1qucggr"]
+
+[ext_resource type="Script" uid="uid://dc54rom1exsjc" path="res://Scripts/DataSchemas/RaceData.gd" id="1_inkjb"]
+
+[resource]
+script = ExtResource("1_inkjb")
+key = &"dwarfRace"
+display_name = "Dwarf"
+size = 3
+base_speed = 20
+ability_mods = {
+"CHA": -2,
+"CON": 2,
+"DEX": 0,
+"INT": 0,
+"STR": 0,
+"WIS": 2
+}
+senses = []
+languages = []
+traits = []
+skill_bonuses = {}
+metadata/_custom_type_script = "uid://dobatn13xqgns"

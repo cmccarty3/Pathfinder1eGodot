@@ -4,8 +4,8 @@
 
 [resource]
 script = ExtResource("1_d1vsy")
-key = &""
-display_name = ""
+key = &"fighterClass"
+display_name = "Fighter"
 hit_die = 10
 skills_per_level = 2
 bab_progression = 0
