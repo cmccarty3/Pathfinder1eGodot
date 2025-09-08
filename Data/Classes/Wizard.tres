@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="ClassData" load_steps=2 format=3 uid="uid://c50liavk42bta"]
+
+[ext_resource type="Script" uid="uid://dobatn13xqgns" path="res://Scripts/DataSchemas/ClassData.gd" id="1_xafdl"]
+
+[resource]
+script = ExtResource("1_xafdl")
+key = &""
+display_name = ""
+hit_die = 6
+skills_per_level = 2
+bab_progression = 2
+fort_save = 1
+reflex_save = 1
+will_save = 0
+class_skills = []
+weapon_proficiencies = []
+armor_proficiencies = []
+features_by_level = []
+spellcasting = 1
+caster_tradition = 1
+caster_ability = &"INT"
+spells_per_day = {}
+spells_known = {}
+metadata/_custom_type_script = "uid://dobatn13xqgns"
