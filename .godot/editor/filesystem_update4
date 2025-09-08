@@ -13,3 +13,7 @@ res://Data/Races/Human.tres
 res://Data/Races/Elf.tres
 res://Data/Races/Dwarf.tres
 res://Scenes/characterCreation.tscn
+res://Scenes/Main.tscn
+res://Scenes/CharacterCreation/CharacterCreation.tscn
+res://Scripts/CharacterCreation/CharacterCreation.gd
+res://Scripts/Main.gd

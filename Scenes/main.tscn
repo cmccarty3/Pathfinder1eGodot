@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://boi32d1xq1ixw"]
 
-[ext_resource type="Script" uid="uid://dfnkw1uc02dkk" path="res://Scripts/main.gd" id="1_jjgbg"]
+[ext_resource type="Script" uid="uid://dfnkw1uc02dkk" path="res://Scripts/Main.gd" id="1_r150o"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jjgbg"]
 bg_color = Color(0, 0, 0, 1)
@@ -12,14 +12,14 @@ border_color = Color(1, 1, 1, 1)
 expand_margin_left = 8.0
 expand_margin_right = 8.0
 
-[node name="Control" type="Control"]
+[node name="Main" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_jjgbg")
+script = ExtResource("1_r150o")
 
 [node name="ScrollContainer" type="ScrollContainer" parent="."]
 layout_mode = 0
@@ -54,6 +54,7 @@ placeholder_text = "Type here..."
 
 [node name="Tooltip" type="PanelContainer" parent="."]
 visible = false
+layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_jjgbg")
@@ -63,3 +64,13 @@ layout_mode = 2
 
 [node name="Label" type="Label" parent="Tooltip/MarginContainer"]
 layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="NewGameButton" type="Button" parent="HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "New Game"

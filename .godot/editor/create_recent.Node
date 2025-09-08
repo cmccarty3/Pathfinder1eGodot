@@ -1,6 +1,12 @@
-PanelContainer
+Control
+Button
+HBoxContainer
 Label
+GridContainer
+RichTextLabel
+OptionButton
+VBoxContainer
 MarginContainer
+PanelContainer
 LineEdit
 ScrollContainer
-RichTextLabel
