@@ -1,0 +1,20 @@
+# Godot 4
+.godot/          # editor cache + transient data
+.import/         # auto-generated import artifacts
+
+# Optional: ignore export presets if they contain machine-specific paths/keys
+# (Commit it if you want presets shared across devices and you keep secrets out.)
+# export_presets.cfg
+
+# Mono / C#
+.mono/
+data_*/
+mono_crash.*
+
+# Build outputs (if you add C# later)
+bin/
+obj/
+
+# OS cruft
+.DS_Store
+Thumbs.db
