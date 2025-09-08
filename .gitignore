@@ -18,3 +18,5 @@ obj/
 # OS cruft
 .DS_Store
 Thumbs.db
+
+ssh-keygen -t ed25519 -C "mccartycarson1999@gmail.com"
