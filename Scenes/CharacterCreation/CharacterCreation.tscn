@@ -2,6 +2,16 @@
 
 [ext_resource type="Script" uid="uid://dybh653qfxsrs" path="res://Scripts/CharacterCreation/CharacterCreation.gd" id="1_i3y6d"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i3y6d"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(1, 1, 1, 1)
+expand_margin_left = 8.0
+expand_margin_right = 8.0
+
 [sub_resource type="GDScript" id="GDScript_i3y6d"]
 script/source = "# res://Scripts/CharacterCreation/AbilityAssigning.gd
 extends PanelContainer
@@ -44,7 +54,7 @@ func _ready() -> void:
 
 	_clear_selection()
 
-func init_assigning(gen_method: int, point_buy_pool: int, values: Array[int]) -> void:
+func init_assigning(_gen_method: int, _point_buy_pool: int, values: Array[int]) -> void:
 	# Defensive copy and populate UI
 	if values.size() != 6:
 		push_error(\"init_assigning: expected 6 values, got %d\" % values.size())
@@ -102,16 +112,6 @@ func get_final_values() -> Array[int]:
 	return ability_values.duplicate()
 "
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i3y6d"]
-bg_color = Color(0, 0, 0, 1)
-border_width_left = 1
-border_width_top = 1
-border_width_right = 1
-border_width_bottom = 1
-border_color = Color(1, 1, 1, 1)
-expand_margin_left = 8.0
-expand_margin_right = 8.0
-
 [node name="CharacterCreation" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -129,145 +129,150 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="AbilityAssigning" type="PanelContainer" parent="."]
-visible = false
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-script = SubResource("GDScript_i3y6d")
-
-[node name="Margins" type="MarginContainer" parent="AbilityAssigning"]
+[node name="Margins" type="MarginContainer" parent="AbilityGeneration"]
 layout_mode = 2
 theme_override_constants/margin_left = 16
 theme_override_constants/margin_top = 16
 theme_override_constants/margin_right = 16
 theme_override_constants/margin_bottom = 16
 
-[node name="VBox" type="VBoxContainer" parent="AbilityAssigning/Margins"]
+[node name="VBox" type="VBoxContainer" parent="AbilityGeneration/Margins"]
 layout_mode = 2
 
-[node name="Title" type="Label" parent="AbilityAssigning/Margins/VBox"]
+[node name="Title" type="Label" parent="AbilityGeneration/Margins/VBox"]
 layout_mode = 2
 theme_type_variation = &"HeaderLarge"
 text = "Choose Ability Score Generation Method"
 horizontal_alignment = 1
 
-[node name="MethodOption" type="OptionButton" parent="AbilityAssigning/Margins/VBox"]
+[node name="MethodOption" type="OptionButton" parent="AbilityGeneration/Margins/VBox"]
 layout_mode = 2
 
-[node name="MethodDesc" type="RichTextLabel" parent="AbilityAssigning/Margins/VBox"]
+[node name="MethodDesc" type="RichTextLabel" parent="AbilityGeneration/Margins/VBox"]
 layout_mode = 2
 bbcode_enabled = true
 fit_content = true
 
-[node name="RollGrid" type="GridContainer" parent="AbilityAssigning/Margins/VBox"]
+[node name="Grid" type="GridContainer" parent="AbilityGeneration/Margins/VBox"]
 layout_mode = 2
 
-[node name="StrBut" type="Button" parent="AbilityAssigning/Margins/VBox/RollGrid"]
-unique_name_in_owner = true
+[node name="StrBut" type="Button" parent="AbilityGeneration/Margins/VBox/Grid"]
 layout_mode = 2
 text = "Str:"
 
-[node name="StrVal" type="Label" parent="AbilityAssigning/Margins/VBox/RollGrid/StrBut"]
+[node name="StrVal" type="Label" parent="AbilityGeneration/Margins/VBox/Grid/StrBut"]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
 text = "-"
 
-[node name="DexBut" type="Button" parent="AbilityAssigning/Margins/VBox/RollGrid"]
-unique_name_in_owner = true
+[node name="DexBut" type="Button" parent="AbilityGeneration/Margins/VBox/Grid"]
 layout_mode = 2
 text = "Dex:"
 
-[node name="DexVal" type="Label" parent="AbilityAssigning/Margins/VBox/RollGrid/DexBut"]
+[node name="DexVal" type="Label" parent="AbilityGeneration/Margins/VBox/Grid/DexBut"]
 offset_right = 40.0
 offset_bottom = 23.0
 text = "-"
 
-[node name="ConBut" type="Button" parent="AbilityAssigning/Margins/VBox/RollGrid"]
-unique_name_in_owner = true
+[node name="ConBut" type="Button" parent="AbilityGeneration/Margins/VBox/Grid"]
 layout_mode = 2
 text = "Con:"
 
-[node name="ConVal" type="Label" parent="AbilityAssigning/Margins/VBox/RollGrid/ConBut"]
+[node name="ConVal" type="Label" parent="AbilityGeneration/Margins/VBox/Grid/ConBut"]
 offset_right = 40.0
 offset_bottom = 23.0
 text = "-"
 
-[node name="IntBut" type="Button" parent="AbilityAssigning/Margins/VBox/RollGrid"]
-unique_name_in_owner = true
+[node name="IntBut" type="Button" parent="AbilityGeneration/Margins/VBox/Grid"]
 layout_mode = 2
 text = "Int:"
 
-[node name="IntVal" type="Label" parent="AbilityAssigning/Margins/VBox/RollGrid/IntBut"]
+[node name="IntVal" type="Label" parent="AbilityGeneration/Margins/VBox/Grid/IntBut"]
 offset_right = 40.0
 offset_bottom = 23.0
 text = "-"
 
-[node name="WisBut" type="Button" parent="AbilityAssigning/Margins/VBox/RollGrid"]
-unique_name_in_owner = true
+[node name="WisBut" type="Button" parent="AbilityGeneration/Margins/VBox/Grid"]
 layout_mode = 2
 text = "Wis: -"
 
-[node name="WisVal" type="Label" parent="AbilityAssigning/Margins/VBox/RollGrid/WisBut"]
+[node name="WisVal" type="Label" parent="AbilityGeneration/Margins/VBox/Grid/WisBut"]
 offset_right = 40.0
 offset_bottom = 23.0
 text = "-"
 
-[node name="Tooltip" type="PanelContainer" parent="AbilityAssigning/Margins/VBox"]
+[node name="ChaBut" type="Button" parent="AbilityGeneration/Margins/VBox/Grid"]
+layout_mode = 2
+text = "Cha:"
+
+[node name="ChaVal" type="Label" parent="AbilityGeneration/Margins/VBox/Grid/ChaBut"]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "-"
+
+[node name="Tooltip" type="PanelContainer" parent="AbilityGeneration/Margins/VBox"]
 visible = false
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_i3y6d")
 
-[node name="MarginContainer" type="MarginContainer" parent="AbilityAssigning/Margins/VBox/Tooltip"]
+[node name="MarginContainer" type="MarginContainer" parent="AbilityGeneration/Margins/VBox/Tooltip"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="AbilityAssigning/Margins/VBox/Tooltip/MarginContainer"]
+[node name="Label" type="Label" parent="AbilityGeneration/Margins/VBox/Tooltip/MarginContainer"]
 layout_mode = 2
 
-[node name="RollRow" type="HBoxContainer" parent="AbilityAssigning/Margins/VBox"]
+[node name="RollRow" type="HBoxContainer" parent="AbilityGeneration/Margins/VBox"]
 layout_mode = 2
 
-[node name="TotalLabel" type="Label" parent="AbilityAssigning/Margins/VBox/RollRow"]
+[node name="TotalLabel" type="Label" parent="AbilityGeneration/Margins/VBox/RollRow"]
 layout_mode = 2
 text = "Total: -"
 
-[node name="StoreRow" type="HBoxContainer" parent="AbilityAssigning/Margins/VBox"]
+[node name="StoreRow" type="HBoxContainer" parent="AbilityGeneration/Margins/VBox"]
 layout_mode = 2
 
-[node name="StoreButton" type="Button" parent="AbilityAssigning/Margins/VBox/StoreRow"]
+[node name="StoreButton" type="Button" parent="AbilityGeneration/Margins/VBox/StoreRow"]
 layout_mode = 2
 text = "Store"
 
-[node name="RerollButton" type="Button" parent="AbilityAssigning/Margins/VBox/StoreRow"]
+[node name="RerollButton" type="Button" parent="AbilityGeneration/Margins/VBox/StoreRow"]
 layout_mode = 2
 text = "Roll"
 
-[node name="RevertButton" type="Button" parent="AbilityAssigning/Margins/VBox/StoreRow"]
+[node name="RevertButton" type="Button" parent="AbilityGeneration/Margins/VBox/StoreRow"]
 layout_mode = 2
 text = "Revert"
 
-[node name="Spacer" type="Control" parent="AbilityAssigning/Margins/VBox/StoreRow"]
+[node name="Spacer" type="Control" parent="AbilityGeneration/Margins/VBox/StoreRow"]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="StoredLabel" type="Label" parent="AbilityAssigning/Margins/VBox/StoreRow"]
+[node name="StoredLabel" type="Label" parent="AbilityGeneration/Margins/VBox/StoreRow"]
 layout_mode = 2
 theme_type_variation = &"HeaderLarge"
 text = "Stored: -"
 horizontal_alignment = 1
 
-[node name="NavButtons" type="HBoxContainer" parent="AbilityAssigning/Margins/VBox"]
+[node name="NavButtons" type="HBoxContainer" parent="AbilityGeneration/Margins/VBox"]
 layout_mode = 2
 
-[node name="BackButton" type="Button" parent="AbilityAssigning/Margins/VBox/NavButtons"]
+[node name="BackButton" type="Button" parent="AbilityGeneration/Margins/VBox/NavButtons"]
 layout_mode = 2
 disabled = true
 text = "Back"
 
-[node name="NextButton" type="Button" parent="AbilityAssigning/Margins/VBox/NavButtons"]
+[node name="NextButton" type="Button" parent="AbilityGeneration/Margins/VBox/NavButtons"]
 layout_mode = 2
 text = "Next →"
+
+[node name="AbilityAssigning" type="PanelContainer" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = SubResource("GDScript_i3y6d")
+button_paths = Array[NodePath]([NodePath("../AbilityGeneration/Margins/VBox/Grid/StrBut"), NodePath("../AbilityGeneration/Margins/VBox/Grid/DexBut"), NodePath("../AbilityGeneration/Margins/VBox/Grid/ConBut"), NodePath("../AbilityGeneration/Margins/VBox/Grid/IntBut"), NodePath("../AbilityGeneration/Margins/VBox/Grid/WisBut/WisVal"), NodePath("../AbilityGeneration/Margins/VBox/Grid/ChaBut")])
 
 [node name="RaceChoose" type="PanelContainer" parent="."]
 visible = false

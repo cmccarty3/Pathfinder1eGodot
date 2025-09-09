@@ -6,12 +6,12 @@ const ABIL_ORDER := ["Str", "Dex", "Con", "Int", "Wis", "Chr"]  # display text
 
 # Grab the six label nodes in order
 @onready var _abil_labels: Array[Label] = [
-	$Margins/VBox/RollGrid/StrVal,
-	$Margins/VBox/RollGrid/DexVal,
-	$Margins/VBox/RollGrid/ConVal,
-	$Margins/VBox/RollGrid/IntVal,
-	$Margins/VBox/RollGrid/WisVal,
-	$Margins/VBox/RollGrid/ChaVal,
+	$AbilityGeneration/Margins/VBox/Grid/StrBut,
+	$AbilityGeneration/Margins/VBox/Grid/DexBut,
+	$AbilityGeneration/Margins/VBox/Grid/ConBut,
+	$AbilityGeneration/Margins/VBox/Grid/IntBut,
+	$AbilityGeneration/Margins/VBox/Grid/WisBut,
+	$AbilityGeneration/Margins/VBox/Grid/ChaBut,
 ]
 # ======= Ability Generation =======
 enum GenMethod {
@@ -174,9 +174,9 @@ func _on_generation_next_pressed() -> void:
 func _on_generation_back_pressed() -> void:
 	pass # keep for future splash/menu
 
-func _show_only(name: String) -> void:
+func _show_only(panel_name: String) -> void:
 	for k in _panels.keys():
-		_panels[k].visible = (k == name)
+		_panels[k].visible = (k == panel_name)
 
 # ---------- dice helpers ----------
 
