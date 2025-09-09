@@ -1,0 +1,111 @@
+{
+	"identity": 
+	{
+		"name": "Testy McTesting",
+		"race": "Human",
+		"gender": "Male",
+		"class": ["Fighter": 1],
+		"alignment": "Neutral Good",
+		"size": "Medium",
+		"languages": ["Common", "Varisian"]
+	},
+	"ability_scores":
+	{	
+		"str": 10,
+		"dex": 10,
+		"con": 10,
+		"int": 10,
+		"wis": 10,
+		"cha": 10	
+	},
+	"ability_modifiers":
+	{
+		"str_mod": 0,
+		"dex_mod": 0,
+		"con_mod": 0,
+		"int_mod": 0,
+		"wis_mod": 0,
+		"cha_mod": 0
+	},
+	"combat": 
+	{
+		"bab": 1,
+		"cmb": 4,
+		"cmd": 16,
+		"init": 2,
+		"hp": 16
+	},
+	"saves": 
+	{
+		"fort": 4,
+		"ref": 2,
+		"will": 1
+	},
+	"ac": 
+	{
+		"total": 17,
+		"touch": 12,
+		"flat_footed": 15,
+		"armor_bonus": 5,
+		"dex_bonus": 2,
+		"misc_bonus": 0
+	},
+	"skills":
+	{
+		"Acrobatics": {"ranks": 0, "mod": 0},
+		"Appraise": {"ranks": 0, "mod": 0},
+		"Bluff": {"ranks": 0, "mod": 0},
+		"Climb": {"ranks": 0, "mod": 0},
+		"Craft": {"ranks": 0, "mod": 0},
+		"Diplomacy": {"ranks": 0, "mod": 0},
+		"Disable Device": {"ranks": 0, "mod": 0},
+		"Disguise": {"ranks": 0, "mod": 0},
+		"Escape Artist": {"ranks": 0, "mod": 0},
+		"Fly": {"ranks": 0, "mod": 0},
+		"Handle Animal": {"ranks": 0, "mod": 0},
+		"Heal": {"ranks": 0, "mod": 0},
+		"Intimidate": {"ranks": 0, "mod": 0},
+		"Knowledge (Arcana)": {"ranks": 0, "mod": 0},
+		"Knowledge (Dungeoneering)": {"ranks": 0, "mod": 0},
+		"Knowledge (Engineering)": {"ranks": 0, "mod": 0},
+		"Knowledge (Geography)": {"ranks": 0, "mod": 0},
+		"Knowledge (History)": {"ranks": 0, "mod": 0},
+		"Knowledge (Local)": {"ranks": 0, "mod": 0},
+		"Knowledge (Nature)": {"ranks": 0, "mod": 0},
+		"Knowledge (Nobility)": {"ranks": 0, "mod": 0},
+		"Knowledge (Planes)": {"ranks": 0, "mod": 0},
+		"Knowledge (Religion)": {"ranks": 0, "mod": 0},
+		"Linguistics": {"ranks": 0, "mod": 0},
+		"Perception": {"ranks": 0, "mod": 0},
+		"Perform": {"ranks": 0, "mod": 0},
+		"Profession": {"ranks": 0, "mod": 0},
+		"Ride": {"ranks": 0, "mod": 0},
+		"Sense Motive": {"ranks": 0, "mod": 0},
+		"Sleight of Hand": {"ranks": 0, "mod": 0},
+		"Spellcraft": {"ranks": 0, "mod": 0},
+		"Stealth": {"ranks": 0, "mod": 0},
+		"Survival": {"ranks": 0, "mod": 0},
+		"Swim": {"ranks": 0, "mod": 0},
+		"Use Magic Device": {"ranks": 0, "mod": 0}
+		
+	},
+	"equipment":
+	{
+		"weapons": 
+		[
+		  {
+			"name": "Longsword",
+			"attack_bonus": 3,
+			"damage": "1d8+3",
+			"crit": "19–20/x2"
+		  }
+		  // more weapons
+		],
+		"armor": { },
+		"gear": [ ],
+		"money": { "gp": 6 }
+	},
+	"feats": ["Toughness", "Two-Weapon Fighting", "Weapon Focus (Longsword)"],
+	"class_featurees": ["Bravery", "Bonus Feats"],
+	"combat_traits": ["Dirty Fighter", "Indomitable Faith"]
+}
