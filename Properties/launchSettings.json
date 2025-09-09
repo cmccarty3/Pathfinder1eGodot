@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "Pathfinder": {
+      "commandName": "Project",
+      "commandLineArgs": "--path \"C:\\Games (C)\\Gadgets\\Godot v4.4.1\\Projects\\pathfinder\"",
+      "workingDirectory": "C:\\Games (C)\\Gadgets\\Godot v4.4.1"
+    }
+  }
+}

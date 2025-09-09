@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="RaceData" load_steps=2 format=3 uid="uid://hbfq7icd3jm7"]
+
+[ext_resource type="Script" uid="uid://c1c78awyqgdv7" path="res://Scripts/DataSchemas/RaceData.cs" id="1_nmoq0"]
+
+[resource]
+script = ExtResource("1_nmoq0")
+Key = "halfling"
+DisplayName = "Halfling"
+RaceSize = 3
+BaseSpeed = 20
+AbilityMods = {
+"STR": -2, "DEX": 2, "CON": 0, "INT": 0, "WIS": 0, "CHA": 2
+}
+Senses = []
+Languages = ["Common", "Halfling"]
+Traits = [
+"Halfling Luck (+1 all saves)",
+"Fearless (+2 vs fear; stacks with Halfling Luck)",
+"Keen Senses (+2 Perception)",
+"Sure-Footed (+2 Acrobatics and Climb)",
+"Weapon Familiarity (halfling weapons)"
+]
+SkillBonuses = {
+"Perception": 2,
+"Acrobatics": 2,
+"Climb": 2
+}
+metadata/_custom_type_script = "uid://c1c78awyqgdv7"

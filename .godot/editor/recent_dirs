@@ -1,6 +1,6 @@
-res://Scenes/CharacterCreation
-res://Scripts/DataSchemas
 res://Data/Races
+res://Scripts/DataSchemas
+res://Scenes/CharacterCreation
 res://Data/Classes
 res://Scripts
 res://

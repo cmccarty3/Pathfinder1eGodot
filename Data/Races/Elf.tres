@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="RaceData" load_steps=2 format=3 uid="uid://n42bsijxi3ce"]
+
+[ext_resource type="Script" uid="uid://c1c78awyqgdv7" path="res://Scripts/DataSchemas/RaceData.cs" id="1_f3p84"]
+
+[resource]
+script = ExtResource("1_f3p84")
+Key = "elf"
+DisplayName = "Elf"
+RaceSize = 4
+BaseSpeed = 30
+AbilityMods = {
+"STR": 0, "DEX": 2, "CON": -2, "INT": 2, "WIS": 0, "CHA": 0
+}
+Senses = ["Low-Light Vision"]
+Languages = ["Common", "Elven"]
+Traits = [
+"Keen Senses (+2 Perception)",
+"Elven Magic (+2 CL checks to overcome SR; +2 Spellcraft to identify magic items)",
+"Elven Immunities (immune to magic sleep; +2 vs enchantment)",
+"Weapon Familiarity (longbows, longswords, rapiers, elven weapons)"
+]
+SkillBonuses = {
+"Perception": 2
+}
+metadata/_custom_type_script = "uid://c1c78awyqgdv7"

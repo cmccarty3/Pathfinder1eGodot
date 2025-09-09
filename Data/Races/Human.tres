@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="RaceData" load_steps=2 format=3 uid="uid://vxrwlv27peev"]
+
+[ext_resource type="Script" uid="uid://c1c78awyqgdv7" path="res://Scripts/DataSchemas/RaceData.cs" id="1_r03lq"]
+
+[resource]
+script = ExtResource("1_r03lq")
+Key = "human"
+DisplayName = "Human"
+RaceSize = 4
+BaseSpeed = 30
+AbilityMods = {
+"STR": 0, "DEX": 0, "CON": 0, "INT": 0, "WIS": 0, "CHA": 0
+}
+Senses = []
+Languages = ["Common"]
+Traits = [
+"Bonus Feat (1st level)",
+"Skilled (+1 skill rank per level)",
+"Flexible Ability Bonus (+2 to one ability of your choice)"
+]
+SkillBonuses = {}
+metadata/_custom_type_script = "uid://c1c78awyqgdv7"

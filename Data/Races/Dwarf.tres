@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="RaceData" load_steps=2 format=3 uid="uid://c58amujglheek"]
+
+[ext_resource type="Script" uid="uid://c1c78awyqgdv7" path="res://Scripts/DataSchemas/RaceData.cs" id="1_inkjb"]
+
+[resource]
+script = ExtResource("1_inkjb")
+Key = "dwarf"
+DisplayName = "Dwarf"
+RaceSize = 4
+BaseSpeed = 20
+AbilityMods = {
+"STR": 0, "DEX": 0, "CON": 2, "INT": 0, "WIS": 2, "CHA": -2
+}
+Senses = ["Darkvision 60 ft."]
+Languages = ["Common", "Dwarven"]
+Traits = [
+"Slow and Steady (speed 20 ft.; not reduced by armor or load)",
+"Defensive Training (+4 dodge AC vs giants)",
+"Hardy (+2 vs poison, spells, and spell-like abilities)",
+"Hatred (+1 attack vs orcs and goblinoids)",
+"Stability (+4 CMD vs bull rush or trip when standing on ground)",
+"Stonecunning (+2 to notice unusual stonework; automatic checks)",
+"Greed (+2 Appraise checks for metals/gems)",
+"Weapon Familiarity (dwarven weapons)"
+]
+SkillBonuses = { }
+metadata/_custom_type_script = "uid://c1c78awyqgdv7"

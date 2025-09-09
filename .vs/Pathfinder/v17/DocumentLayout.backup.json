@@ -1,7 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Games (C)\\Gadgets\\Godot v4.4.1\\Projects\\pathfinder\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{14DE131A-9FE2-4049-A6CB-9B1F4922DB2F}|Pathfinder.csproj|c:\\games (c)\\gadgets\\godot v4.4.1\\projects\\pathfinder\\pathfinder.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{14DE131A-9FE2-4049-A6CB-9B1F4922DB2F}|Pathfinder.csproj|solutionrelative:pathfinder.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +14,19 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Pathfinder",
+              "DocumentMoniker": "C:\\Games (C)\\Gadgets\\Godot v4.4.1\\Projects\\pathfinder\\Pathfinder.csproj",
+              "RelativeDocumentMoniker": "Pathfinder.csproj",
+              "ToolTip": "C:\\Games (C)\\Gadgets\\Godot v4.4.1\\Projects\\pathfinder\\Pathfinder.csproj",
+              "RelativeToolTip": "Pathfinder.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-09-09T10:24:49.153Z",
+              "EditorCaption": ""
             }
           ]
         }
