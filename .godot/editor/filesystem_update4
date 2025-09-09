@@ -1,2 +1,7 @@
 res://Scenes/Main.tscn
+res://Scripts/DataSchemas/RaceData.cs
 res://Scenes/CharacterCreation/CharacterCreation.tscn
+res://Scripts/DataSchemas/ClassData.cs
+res://Scripts/DataSchemas/CharacterData.cs
+res://Scripts/DataSchemas/FeatData.cs
+res://Scripts/DataSchemas/SpellData.cs
