@@ -8,19 +8,18 @@ Key = "half_elf"
 DisplayName = "Half-Elf"
 RaceSize = 4
 BaseSpeed = 30
-AbilityMods = {
-"STR": 0, "DEX": 0, "CON": 0, "INT": 0, "WIS": 0, "CHA": 0
-}
-Senses = ["Low-Light Vision"]
-Languages = ["Common", "Elven"]
-Traits = [
-"Adaptability (Skill Focus as bonus feat)",
-"Elf Blood (count as both elf and human)",
-"Keen Senses (+2 Perception)",
-"Multitalented (choose two favored classes)",
-"Flexible Ability Bonus (+2 to one ability of your choice)"
-]
-SkillBonuses = {
+AbilityMods = Dictionary[String, int]({
+"CHA": 0,
+"CON": 0,
+"DEX": 0,
+"INT": 0,
+"STR": 0,
+"WIS": 0
+})
+Senses = Array[String](["Low-Light Vision"])
+Languages = Array[String](["Common", "Elven"])
+Traits = Array[String](["Adaptability (Skill Focus as bonus feat)", "Elf Blood (count as both elf and human)", "Keen Senses (+2 Perception)", "Multitalented (choose two favored classes)", "Flexible Ability Bonus (+2 to one ability of your choice)"])
+SkillBonuses = Dictionary[String, int]({
 "Perception": 2
-}
+})
 metadata/_custom_type_script = "uid://c1c78awyqgdv7"

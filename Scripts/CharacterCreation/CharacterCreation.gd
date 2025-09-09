@@ -6,14 +6,13 @@ const ABIL_ORDER := ["Str", "Dex", "Con", "Int", "Wis", "Chr"]  # display text
 
 # Grab the six label nodes in order
 @onready var _abil_labels: Array[Label] = [
-	$AbilityGeneration/Margins/VBox/RollGrid/StrVal,
-	$AbilityGeneration/Margins/VBox/RollGrid/DexVal,
-	$AbilityGeneration/Margins/VBox/RollGrid/ConVal,
-	$AbilityGeneration/Margins/VBox/RollGrid/IntVal,
-	$AbilityGeneration/Margins/VBox/RollGrid/WisVal,
-	$AbilityGeneration/Margins/VBox/RollGrid/ChaVal,
+	$Margins/VBox/RollGrid/StrVal,
+	$Margins/VBox/RollGrid/DexVal,
+	$Margins/VBox/RollGrid/ConVal,
+	$Margins/VBox/RollGrid/IntVal,
+	$Margins/VBox/RollGrid/WisVal,
+	$Margins/VBox/RollGrid/ChaVal,
 ]
-
 # ======= Ability Generation =======
 enum GenMethod {
 	POINT_BUY,

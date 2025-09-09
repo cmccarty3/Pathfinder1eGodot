@@ -8,20 +8,18 @@ Key = "gnome"
 DisplayName = "Gnome"
 RaceSize = 3
 BaseSpeed = 20
-AbilityMods = {
-"STR": -2, "DEX": 0, "CON": 2, "INT": 0, "WIS": 0, "CHA": 2
-}
-Senses = ["Low-Light Vision"]
-Languages = ["Common", "Gnome"]
-Traits = [
-"Keen Senses (+2 Perception)",
-"Gnome Magic (dancing lights, ghost sound, prestidigitation 1/day; speak with animals 1/day)",
-"Illusion Resistance (+2 saves vs illusions)",
-"Obsessive (+2 to one Craft or Profession of your choice)",
-"Hatred (+1 attack vs reptilian and goblinoid creatures)",
-"Weapon Familiarity (gnome weapons)"
-]
-SkillBonuses = {
+AbilityMods = Dictionary[String, int]({
+"CHA": 2,
+"CON": 2,
+"DEX": 0,
+"INT": 0,
+"STR": -2,
+"WIS": 0
+})
+Senses = Array[String](["Low-Light Vision"])
+Languages = Array[String](["Common", "Gnome"])
+Traits = Array[String](["Keen Senses (+2 Perception)", "Gnome Magic (dancing lights, ghost sound, prestidigitation 1/day; speak with animals 1/day)", "Illusion Resistance (+2 saves vs illusions)", "Obsessive (+2 to one Craft or Profession of your choice)", "Hatred (+1 attack vs reptilian and goblinoid creatures)", "Weapon Familiarity (gnome weapons)"])
+SkillBonuses = Dictionary[String, int]({
 "Perception": 2
-}
+})
 metadata/_custom_type_script = "uid://c1c78awyqgdv7"

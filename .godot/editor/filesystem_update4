@@ -2,3 +2,13 @@ res://Data/Races/Gnome.tres
 res://Data/Races/HalfElf.tres
 res://Data/Races/Halfling.tres
 res://Data/Races/HalfOrc.tres
+res://Scenes/Main.tscn
+res://Scripts/DataSchemas/RaceData.cs
+res://Scenes/CharacterCreation/AbilityAssigning.gd
+res://Scenes/CharacterCreation/CharacterCreation.tscn
+res://Scripts/CharacterCreation/CharacterCreation.gd
+res://Scripts/DataSchemas/SpellData.cs
+res://Scripts/DataSchemas/ClassData.cs
+res://Scripts/DataSchemas/CharacterData.cs
+res://Scripts/DataSchemas/FeatData.cs
+res://Scripts/CharacterCreation/AbilityAssigning.gd
