@@ -45,13 +45,6 @@ func _ready() -> void:
 		push_error(\"AbilityAssigning: expected 6 buttons, got %d. Check 'button_paths' in the inspector.\" % _buttons.size())
 		return
 
-	# Connect pressed handlers
-	for i in _buttons.size():
-		var idx := i
-		# Avoid duplicate connects in case of scene reloads
-		if not _buttons[i].pressed.is_connected(_on_button_pressed.bind(idx)):
-			_buttons[i].pressed.connect(_on_button_pressed.bind(idx))
-
 	_clear_selection()
 
 func init_assigning(_gen_method: int, _point_buy_pool: int, values: Array[int]) -> void:
@@ -60,12 +53,20 @@ func init_assigning(_gen_method: int, _point_buy_pool: int, values: Array[int]) 
 		push_error(\"init_assigning: expected 6 values, got %d\" % values.size())
 		return
 	ability_values = values.duplicate()
+	# Connect pressed handlers once ability_values is ready
+	for i in _buttons.size():
+		var idx := i
+		# Avoid duplicate connects in case of scene reloads
+		if not _buttons[i].pressed.is_connected(_on_button_pressed.bind(idx)):
+			_buttons[i].pressed.connect(_on_button_pressed.bind(idx))
 	for i in _buttons.size():
 		_set_button_text(i, ability_values[i])
 		_set_highlight(i, false)
 	_selected = -1
 
 func _on_button_pressed(index: int) -> void:
+	if ability_values.size() != 6:
+		return
 	# First pick
 	if _selected == -1:
 		_selected = index
