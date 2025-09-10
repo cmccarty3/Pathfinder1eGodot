@@ -6,12 +6,12 @@ const ABIL_ORDER := ["Str", "Dex", "Con", "Int", "Wis", "Chr"]  # display text
 
 # Grab the six value labels (to the right of each ability)
 @onready var _abil_value_labels: Array[Label] = [
-        $AbilityGeneration/Margins/VBox/Grid/StrBut/StrVal,
-        $AbilityGeneration/Margins/VBox/Grid/DexBut/DexVal,
-        $AbilityGeneration/Margins/VBox/Grid/ConBut/ConVal,
-        $AbilityGeneration/Margins/VBox/Grid/IntBut/IntVal,
-        $AbilityGeneration/Margins/VBox/Grid/WisBut/WisVal,
-        $AbilityGeneration/Margins/VBox/Grid/ChaBut/ChaVal,
+		$AbilityGeneration/Margins/VBox/Grid/StrBut/StrVal,
+		$AbilityGeneration/Margins/VBox/Grid/DexBut/DexVal,
+		$AbilityGeneration/Margins/VBox/Grid/ConBut/ConVal,
+		$AbilityGeneration/Margins/VBox/Grid/IntBut/IntVal,
+		$AbilityGeneration/Margins/VBox/Grid/WisBut/WisVal,
+		$AbilityGeneration/Margins/VBox/Grid/ChaBut/ChaVal,
 ]
 # ======= Ability Generation =======
 enum GenMethod {
@@ -135,8 +135,8 @@ func _on_revert_pressed() -> void:
 func _reset_roll_ui() -> void:
 	current_roll.clear()
 	_lbl_total.text = "Total: –"
-        for label in _abil_value_labels:
-                label.text = "-"
+	for label in _abil_value_labels:
+		label.text = "-"
 	_lbl_stored.text = "Stored: –"
 	_btn_revert.disabled = true
 	var rolling_allowed := gen_method != GenMethod.POINT_BUY
@@ -145,11 +145,11 @@ func _reset_roll_ui() -> void:
 
 
 func _update_roll_display() -> void:
-        for i in _abil_value_labels.size():
-                var val_text := "-"
-                if i < current_roll.size():
-                        val_text = str(current_roll[i])
-                _abil_value_labels[i].text = val_text
+	for i in _abil_value_labels.size():
+		var val_text := "-"
+		if i < current_roll.size():
+			val_text = str(current_roll[i])
+		_abil_value_labels[i].text = val_text
 	_lbl_total.text = "Total: %s" % (str(_sum(current_roll)) if current_roll.size() == 6 else "–")
 	_btn_store.disabled = current_roll.size() != 6
 
@@ -167,9 +167,8 @@ func _on_generation_next_pressed() -> void:
 		rolled_values = current_roll.duplicate() if current_roll.size() == 6 else _roll_by_method(gen_method)
 
 	_show_only("AbilityAssigning")
-	# If your AbilityAssigning node has an initializer, call it here:
-	# if _panels["AbilityAssigning"].has_method("init_assigning"):
-	#     _panels["AbilityAssigning"].call("init_assigning", gen_method, point_buy_pool, rolled_values)
+	assert(rolled_values.size() == 6, "AbilityAssigning requires exactly 6 values")
+	$AbilityAssigning.init_assigning(gen_method, point_buy_pool, rolled_values)
 
 func _on_generation_back_pressed() -> void:
 	pass # keep for future splash/menu

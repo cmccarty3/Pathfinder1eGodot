@@ -162,54 +162,83 @@ text = "Str:"
 
 [node name="StrVal" type="Label" parent="AbilityGeneration/Margins/VBox/Grid/StrBut"]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
+offset_left = 37.0
+offset_top = 4.0
+offset_right = 73.0
+offset_bottom = 27.0
 text = "-"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="DexBut" type="Button" parent="AbilityGeneration/Margins/VBox/Grid"]
 layout_mode = 2
 text = "Dex:"
 
 [node name="DexVal" type="Label" parent="AbilityGeneration/Margins/VBox/Grid/DexBut"]
-offset_right = 40.0
-offset_bottom = 23.0
+layout_mode = 0
+offset_left = 35.0
+offset_top = 4.0
+offset_right = 75.0
+offset_bottom = 27.0
 text = "-"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="ConBut" type="Button" parent="AbilityGeneration/Margins/VBox/Grid"]
 layout_mode = 2
 text = "Con:"
 
 [node name="ConVal" type="Label" parent="AbilityGeneration/Margins/VBox/Grid/ConBut"]
-offset_right = 40.0
-offset_bottom = 23.0
+layout_mode = 0
+offset_left = 34.0
+offset_top = 4.0
+offset_right = 74.0
+offset_bottom = 27.0
 text = "-"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="IntBut" type="Button" parent="AbilityGeneration/Margins/VBox/Grid"]
 layout_mode = 2
 text = "Int:"
 
 [node name="IntVal" type="Label" parent="AbilityGeneration/Margins/VBox/Grid/IntBut"]
-offset_right = 40.0
-offset_bottom = 23.0
+layout_mode = 0
+offset_left = 34.0
+offset_top = 4.0
+offset_right = 74.0
+offset_bottom = 27.0
 text = "-"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="WisBut" type="Button" parent="AbilityGeneration/Margins/VBox/Grid"]
 layout_mode = 2
 text = "Wis:"
 
 [node name="WisVal" type="Label" parent="AbilityGeneration/Margins/VBox/Grid/WisBut"]
-offset_right = 40.0
-offset_bottom = 23.0
+layout_mode = 0
+offset_left = 33.0
+offset_top = 4.0
+offset_right = 73.0
+offset_bottom = 27.0
 text = "-"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="ChaBut" type="Button" parent="AbilityGeneration/Margins/VBox/Grid"]
 layout_mode = 2
 text = "Cha:"
 
 [node name="ChaVal" type="Label" parent="AbilityGeneration/Margins/VBox/Grid/ChaBut"]
-offset_right = 40.0
-offset_bottom = 23.0
+layout_mode = 0
+offset_left = 33.0
+offset_top = 4.0
+offset_right = 73.0
+offset_bottom = 27.0
 text = "-"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Tooltip" type="PanelContainer" parent="AbilityGeneration/Margins/VBox"]
 visible = false
