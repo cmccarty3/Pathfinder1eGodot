@@ -24,6 +24,7 @@ const ABIL_ORDER := [\"STR\",\"DEX\",\"CON\",\"INT\",\"WIS\",\"CHA\"]
 
 # Resolved buttons live here
 var _buttons: Array[Button] = []
+var _labels: Array[Label] = []
 
 # Current values (same order as ABIL_ORDER)
 var ability_values: Array[int] = []
@@ -33,12 +34,21 @@ var _selected := -1
 func _ready() -> void:
 	# Resolve the paths safely
 	_buttons.clear()
+	_labels.clear()
 	for p in button_paths:
 		var b := get_node_or_null(p) as Button
 		if b == null:
 			push_error(\"AbilityAssigning: Button not found at path: %s\" % [p])
 		else:
 			_buttons.append(b)
+			var label: Label = null
+			for child in b.get_children():
+				if child is Label:
+					label = child
+					break
+			if label == null:
+				push_error(\"AbilityAssigning: Label not found under button %s\" % b.name)
+			_labels.append(label)
 
 	# Guard: we need exactly 6 buttons
 	if _buttons.size() != 6:
@@ -92,8 +102,10 @@ func _on_button_pressed(index: int) -> void:
 	_selected = -1
 
 func _set_button_text(i: int, value: int) -> void:
-	# We only set Button.text. If you kept child Labels, you can update them here too.
-	_buttons[i].text = \"%s: %d\" % [ABIL_ORDER[i], value]
+	# Update the button caption and its value label
+	_buttons[i].text = \"%s:\" % ABIL_ORDER[i].capitalize()
+	if i < _labels.size() and _labels[i] != null:
+		_labels[i].text = str(value)
 
 func _set_highlight(i: int, on: bool) -> void:
 	if on:
