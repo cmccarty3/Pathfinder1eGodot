@@ -4,14 +4,14 @@ extends Control
 const ABIL_ORDER := ["Str", "Dex", "Con", "Int", "Wis", "Chr"]  # display text
 # (If you prefer "Cha" instead of "Chr", just change it here.)
 
-# Grab the six label nodes in order
-@onready var _abil_labels: Array[Label] = [
-	$AbilityGeneration/Margins/VBox/Grid/StrBut,
-	$AbilityGeneration/Margins/VBox/Grid/DexBut,
-	$AbilityGeneration/Margins/VBox/Grid/ConBut,
-	$AbilityGeneration/Margins/VBox/Grid/IntBut,
-	$AbilityGeneration/Margins/VBox/Grid/WisBut,
-	$AbilityGeneration/Margins/VBox/Grid/ChaBut,
+# Grab the six value labels (to the right of each ability)
+@onready var _abil_value_labels: Array[Label] = [
+        $AbilityGeneration/Margins/VBox/Grid/StrBut/StrVal,
+        $AbilityGeneration/Margins/VBox/Grid/DexBut/DexVal,
+        $AbilityGeneration/Margins/VBox/Grid/ConBut/ConVal,
+        $AbilityGeneration/Margins/VBox/Grid/IntBut/IntVal,
+        $AbilityGeneration/Margins/VBox/Grid/WisBut/WisVal,
+        $AbilityGeneration/Margins/VBox/Grid/ChaBut/ChaVal,
 ]
 # ======= Ability Generation =======
 enum GenMethod {
@@ -135,8 +135,8 @@ func _on_revert_pressed() -> void:
 func _reset_roll_ui() -> void:
 	current_roll.clear()
 	_lbl_total.text = "Total: –"
-	for i in _abil_labels.size():
-		_abil_labels[i].text = "%s: -" % ABIL_ORDER[i]
+        for label in _abil_value_labels:
+                label.text = "-"
 	_lbl_stored.text = "Stored: –"
 	_btn_revert.disabled = true
 	var rolling_allowed := gen_method != GenMethod.POINT_BUY
@@ -145,11 +145,11 @@ func _reset_roll_ui() -> void:
 
 
 func _update_roll_display() -> void:
-	for i in _abil_labels.size():
-		var val_text := "-"
-		if i < current_roll.size():
-			val_text = str(current_roll[i])
-		_abil_labels[i].text = "%s: %s" % [ABIL_ORDER[i], val_text]
+        for i in _abil_value_labels.size():
+                var val_text := "-"
+                if i < current_roll.size():
+                        val_text = str(current_roll[i])
+                _abil_value_labels[i].text = val_text
 	_lbl_total.text = "Total: %s" % (str(_sum(current_roll)) if current_roll.size() == 6 else "–")
 	_btn_store.disabled = current_roll.size() != 6
 

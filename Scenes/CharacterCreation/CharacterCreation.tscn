@@ -195,7 +195,7 @@ text = "-"
 
 [node name="WisBut" type="Button" parent="AbilityGeneration/Margins/VBox/Grid"]
 layout_mode = 2
-text = "Wis: -"
+text = "Wis:"
 
 [node name="WisVal" type="Label" parent="AbilityGeneration/Margins/VBox/Grid/WisBut"]
 offset_right = 40.0
@@ -272,7 +272,7 @@ layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 script = SubResource("GDScript_i3y6d")
-button_paths = Array[NodePath]([NodePath("../AbilityGeneration/Margins/VBox/Grid/StrBut"), NodePath("../AbilityGeneration/Margins/VBox/Grid/DexBut"), NodePath("../AbilityGeneration/Margins/VBox/Grid/ConBut"), NodePath("../AbilityGeneration/Margins/VBox/Grid/IntBut"), NodePath("../AbilityGeneration/Margins/VBox/Grid/WisBut/WisVal"), NodePath("../AbilityGeneration/Margins/VBox/Grid/ChaBut")])
+button_paths = Array[NodePath]([NodePath("../AbilityGeneration/Margins/VBox/Grid/StrBut"), NodePath("../AbilityGeneration/Margins/VBox/Grid/DexBut"), NodePath("../AbilityGeneration/Margins/VBox/Grid/ConBut"), NodePath("../AbilityGeneration/Margins/VBox/Grid/IntBut"), NodePath("../AbilityGeneration/Margins/VBox/Grid/WisBut"), NodePath("../AbilityGeneration/Margins/VBox/Grid/ChaBut")])
 
 [node name="RaceChoose" type="PanelContainer" parent="."]
 visible = false
