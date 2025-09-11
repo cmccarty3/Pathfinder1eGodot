@@ -1,9 +1,9 @@
 res://Scenes/Main.tscn
 res://Scripts/DataSchemas/RaceData.cs
-res://Scenes/CharacterCreation/CharacterCreation.tscn
 res://Scripts/DataSchemas/SpellData.cs
 res://Scripts/DataSchemas/ClassData.cs
 res://Scripts/DataSchemas/CharacterData.cs
 res://Scripts/DataSchemas/FeatData.cs
+res://Scenes/CharacterCreation/CharacterCreation.tscn
 res://Scripts/CharacterCreation/CharacterCreation.gd
 res://Scripts/CharacterCreation/AbilityAssigning.gd
