@@ -39,13 +39,13 @@ var current_roll: Array[int] = []   # six numbers for the UI
 var stored_roll: Array[int] = []    # snapshot when user clicks "Store"
 var rolled_values: Array[int] = []  # what we pass to the next step (kept for compatibility)
 
-# NEW: State for swapping
+# State for swapping
 var _selected_swap_index := -1
 
 # Panels
 @onready var _panels := {
+	"BackgroundInfo": $BackgroundInfo,
 	"AbilityGeneration": $AbilityGeneration,
-	"RaceChoose": $RaceChoose,
 	"ClassChoose": $ClassChoose,
 	"FinalizeCharacter": $FinalizeCharacter
 }
@@ -56,7 +56,7 @@ var _selected_swap_index := -1
 @onready var _btn_back: Button = $AbilityGeneration/Margins/VBox/NavButtons/BackButton
 @onready var _btn_next: Button = $AbilityGeneration/Margins/VBox/NavButtons/NextButton
 
-# NEW: roll UI
+# Roll UI
 @onready var _lbl_total: Label = $AbilityGeneration/Margins/VBox/RollRow/TotalLabel
 @onready var _btn_store: Button = $AbilityGeneration/Margins/VBox/StoreRow/StoreButton
 @onready var _btn_reroll: Button = $AbilityGeneration/Margins/VBox/StoreRow/RerollButton
@@ -96,7 +96,7 @@ func _bind_generation_signals() -> void:
 	_btn_reroll.pressed.connect(_on_reroll_pressed)
 	_btn_revert.pressed.connect(_on_revert_pressed)
 	
-	# NEW: Connect ability buttons to the swapping function
+	# Connect ability buttons to the swapping function
 	for i in _ability_buttons.size():
 		var idx := i
 		_ability_buttons[i].pressed.connect(func(): _on_ability_pressed(idx))
@@ -125,7 +125,7 @@ func _update_method_desc() -> void:
 			text = "[b]4d6 (reroll 1s once, drop lowest)[/b]\nReroll any 1s once, then drop the lowest."
 	_method_desc.text = text
 
-# NEW: Swapping logic function
+# Swapping logic function
 func _on_ability_pressed(index: int) -> void:
 	# Ignore clicks if no values are present
 	if current_roll.size() != 6:
@@ -195,7 +195,7 @@ func _reset_roll_ui() -> void:
 	var rolling_allowed := gen_method != GenMethod.POINT_BUY
 	_btn_reroll.disabled = not rolling_allowed
 	_btn_store.disabled = true
-	# NEW: Clear any highlights
+	# Clear any highlights
 	_set_highlight_all(false)
 	_selected_swap_index = -1
 
@@ -217,7 +217,7 @@ func _update_roll_display() -> void:
 func _on_generation_next_pressed() -> void:
 	rolled_values.clear()
 	if gen_method == GenMethod.POINT_BUY:
-		# Point buy: nothing to pass;
+		# Point buy: nothing to pass yet;
 		pass
 	else:
 		# Prefer the user-visible current roll if present;

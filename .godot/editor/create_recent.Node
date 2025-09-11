@@ -1,12 +1,12 @@
 Label
+VBoxContainer
+MarginContainer
 Button
 Control
 HBoxContainer
 GridContainer
 RichTextLabel
 OptionButton
-VBoxContainer
-MarginContainer
 PanelContainer
 LineEdit
 ScrollContainer

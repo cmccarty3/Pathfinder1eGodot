@@ -21,7 +21,29 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_i3y6d")
 
+[node name="BackgroundInfo" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Margins" type="MarginContainer" parent="BackgroundInfo"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="BackgroundInfo/Margins"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="BackgroundInfo/Margins/VBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"HeaderLarge"
+text = "Background Information"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="AbilityGeneration" type="PanelContainer" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -194,12 +216,6 @@ text = "Back"
 [node name="NextButton" type="Button" parent="AbilityGeneration/Margins/VBox/NavButtons"]
 layout_mode = 2
 text = "Next →"
-
-[node name="RaceChoose" type="PanelContainer" parent="."]
-visible = false
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
 
 [node name="ClassChoose" type="PanelContainer" parent="."]
 visible = false
