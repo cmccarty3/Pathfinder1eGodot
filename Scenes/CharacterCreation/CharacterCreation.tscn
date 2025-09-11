@@ -1,6 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://8eke5ddqdxni"]
 
 [ext_resource type="Script" uid="uid://dybh653qfxsrs" path="res://Scripts/CharacterCreation/CharacterCreation.gd" id="1_i3y6d"]
+[ext_resource type="Script" uid="uid://c65cpsv08nqss" path="res://Scripts/CharacterCreation/AbilityAssigning.gd" id="2_mox0w"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i3y6d"]
 bg_color = Color(0, 0, 0, 1)
@@ -12,6 +13,7 @@ border_color = Color(1, 1, 1, 1)
 expand_margin_left = 8.0
 expand_margin_right = 8.0
 
+<<<<<<< Updated upstream
 [sub_resource type="GDScript" id="GDScript_i3y6d"]
 script/source = "# res://Scripts/CharacterCreation/AbilityAssigning.gd
 extends PanelContainer
@@ -113,6 +115,8 @@ func get_final_values() -> Array[int]:
 	return ability_values.duplicate()
 "
 
+=======
+>>>>>>> Stashed changes
 [node name="CharacterCreation" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -129,6 +133,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("2_mox0w")
 
 [node name="Margins" type="MarginContainer" parent="AbilityGeneration"]
 layout_mode = 2
@@ -301,8 +306,6 @@ visible = false
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
-script = SubResource("GDScript_i3y6d")
-button_paths = Array[NodePath]([NodePath("../AbilityGeneration/Margins/VBox/Grid/StrBut"), NodePath("../AbilityGeneration/Margins/VBox/Grid/DexBut"), NodePath("../AbilityGeneration/Margins/VBox/Grid/ConBut"), NodePath("../AbilityGeneration/Margins/VBox/Grid/IntBut"), NodePath("../AbilityGeneration/Margins/VBox/Grid/WisBut"), NodePath("../AbilityGeneration/Margins/VBox/Grid/ChaBut")])
 
 [node name="RaceChoose" type="PanelContainer" parent="."]
 visible = false

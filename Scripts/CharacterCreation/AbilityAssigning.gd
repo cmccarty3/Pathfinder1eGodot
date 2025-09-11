@@ -4,12 +4,12 @@ extends PanelContainer
 const ABIL_ORDER := ["STR","DEX","CON","INT","WIS","CHA"]
 
 @onready var ability_buttons: Array[Button] = [
-	$Margins/VBox/Grid/StrVal,
-	$Margins/VBox/Grid/DexVal,
-	$Margins/VBox/Grid/ConVal,
-	$Margins/VBox/Grid/IntVal,
-	$Margins/VBox/Grid/WisVal,
-	$Margins/VBox/Grid/ChaVal,
+	$Margins/VBox/Grid/StrBut,
+	$Margins/VBox/Grid/DexBut,
+	$Margins/VBox/Grid/ConBut,
+	$Margins/VBox/Grid/IntBut,
+	$Margins/VBox/Grid/WisBut,
+	$Margins/VBox/Grid/ChaBut,
 ]
 
 var ability_values: Array[int] = []
@@ -20,7 +20,7 @@ func _ready() -> void:
 		var idx := i
 		ability_buttons[i].pressed.connect(func() -> void: _on_ability_pressed(idx))
 
-func init_assigning(gen_method: int, point_buy_pool: int, values: Array[int]) -> void:
+func init_assigning(_gen_method: int, _point_buy_pool: int, values: Array[int]) -> void:
 	ability_values = values.duplicate()
 	for i in ability_buttons.size():
 		ability_buttons[i].text = "%s: %d" % [ABIL_ORDER[i], ability_values[i]]
