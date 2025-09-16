@@ -1,3 +1,4 @@
+Theme
 RaceData
 Resource
 ClassData

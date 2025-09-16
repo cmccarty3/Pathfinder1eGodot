@@ -8,6 +8,16 @@ public partial class CharacterData : Resource
 	[Export] public ClassData ClassRef { get; set; }  // Reference to chosen class Resource
 	[Export] public RaceData RaceRef { get; set; }    // Reference to chosen race Resource
 
+	// New Background Fields
+	[Export] public string Gender { get; set; }
+	[Export] public string Alignment { get; set; }
+	[Export] public string Deity { get; set; }
+	[Export] public int Age { get; set; }
+	[Export] public string Height { get; set; }
+	[Export] public string Weight { get; set; }
+	[Export] public string Homeland { get; set; }
+	[Export] public Godot.Collections.Array<string> Traits { get; set; } = new Godot.Collections.Array<string>();
+	
 	// Base ability scores before modifiers (starts at 10s by default)
 	[Export] public Godot.Collections.Dictionary<string, int> BaseAbilities { get; set; }
 		= new Godot.Collections.Dictionary<string, int>() {
